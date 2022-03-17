@@ -1,42 +1,58 @@
-import java.util.Scanner;
-public class Diamond 
-{
-public static void main(String[] args)
-{
-Scanner sc=new Scanner(System.in);
+import java.util.*;
 
-System.out.println("Enter N : ");
+public class DiamondPattern {
 
-int n=sc.nextInt(); 
+public static void main(String args[]) {
 
-System.out.print("Enter Symbol : ");
+int n = 5;
 
-char c = sc.next().charAt(0);
+//upper part
 
-for(int i=1;i<=n;i++)
-{
-for(int j=1;j<=n-i;j++)
-{
+for(int i=1; i<=n; i++) {
+
+//spaces
+
+for(int j=1; j<=n-i; j++) {
+
 System.out.print(" ");
+
 }
-for(int j=1;j<=i*2-1;j++)
-{
-System.out.print(c);
+
+for(int j=1; j<=2*i-1; j++) {
+
+System.out.print("*");
+
 }
+
 System.out.println();
-} 
-for(int i=n-1;i>0;i--)
-{
-for(int j=1;j<=n-i;j++)
-{
+
+}
+
+//lower part
+
+for(int i=n; i>=1; i--) {
+
+//spaces
+
+for(int j=1; j<=n-i; j++) {
+
 System.out.print(" ");
+
 }
-for(int j=1;j<=i*2-1;j++)
-{
-System.out.print(c);
+
+for(int j=1; j<=2*i-1; j++) {
+
+System.out.print("*");
+
 }
+
 System.out.println();
+
 }
+
 }
+
 }
+
+
 
